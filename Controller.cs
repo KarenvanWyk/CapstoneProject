@@ -24,7 +24,7 @@ namespace Capstone
         }
 
         [Test]
-        public void OpenHomePage()
+        public void HomePage()
         {
             PageHome.OpenHomePage(driver);
         }
@@ -62,7 +62,6 @@ namespace Capstone
             bool isContains = urlList.Any(x => x.Contains("Jewelry"));
 
             driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]")).Click();                                   // Select the List option under the View as dropdown
-            Thread.Sleep(500);
 
             driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]/option[2]")).Click();                         // Products will be displayed underneath each other
         }
@@ -80,7 +79,6 @@ namespace Capstone
             bool isContains = urlList.Any(x => x.Contains("Jewelry"));
 
             driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]")).Click();                                   // Select the List option under the View as dropdown
-            Thread.Sleep(500);
 
             driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]/option[2]")).Click();                         // Products will be displayed underneath each other
 
@@ -100,7 +98,6 @@ namespace Capstone
             bool isContains = urlList.Any(x => x.Contains("Jewelry"));
 
             driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]")).Click();                                   // Select the List option under the View as dropdown
-            Thread.Sleep(500);
 
             driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]/option[2]")).Click();                         // Products will be displayed underneath each other
 
@@ -123,23 +120,26 @@ namespace Capstone
             bool isContains = urlList.Any(x => x.Contains("Jewelry"));
 
             driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]")).Click();                                   // Select the List option under the View as dropdown
-            Thread.Sleep(500);
 
             driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]/option[2]")).Click();                         // Products will be displayed underneath each other
 
             PageJewelry.Jewelry(driver, session, key);
 
             PageCart.ShoppingCart(driver, session, key);
+            Thread.Sleep(5000);
 
             driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[1]/div[1]/a/img")).Click();                     // Click on the Demo Work Shop Logo. Home page is displayed
+            Thread.Sleep(5000);
 
             driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")).Click();         // Select on the Logout link in the page header.  Home page with login option is displayed
+         
+
         }
 
         [OneTimeTearDown]
         public void OneTimeTearDown()
         {
-            driver.Dispose();
+           driver.Dispose();
         }
 
     }

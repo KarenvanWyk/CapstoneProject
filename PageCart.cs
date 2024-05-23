@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.CodeCoverage;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using SikuliSharp;
 using WindowsInput;
 using WindowsInput.Native;
@@ -20,28 +19,29 @@ namespace Capstone
             session.Click(iPattern);
 
             string path1 = "C:\\Training\\CapstoneProject\\Images\\American_Samoa.png";                   // Select American Samoa as the downdrop option (Use Sikuli)
-            IPattern iPatterm1 = Patterns.FromFile(path1);
-            session.Wait(iPatterm1);
-            session.Click(iPatterm1);
+            IPattern iPattern1 = Patterns.FromFile(path1);
+            session.Wait(iPattern1);
+            session.Click(iPattern1);
 
             Thread.Sleep(500);
             InputSimulator sim = new InputSimulator();
             sim.Keyboard.KeyPress(key);
 
             string path2 = "C:\\Training\\CapstoneProject\\Images\\Zip_Code.png";                         // Insert 96799 into the Zipcode source field(Use Sikuli)
-            IPattern iPatterm2 = Patterns.FromFile(path2);
-            session.Click(iPatterm2);
+            IPattern iPattern2 = Patterns.FromFile(path2);
+            session.Wait(iPattern2);
+            session.Click(iPattern2);
             session.Type("96799");
 
             string path3 = "C:\\Training\\CapstoneProject\\Images\\T_and_C.png";                          // Select the Agree to TC & C checkbox(Use Sikuli)
-            IPattern iPatterm3 = Patterns.FromFile(path3); 
-            session.Wait(iPatterm3);
-            session.Click(iPatterm3);
+            IPattern iPattern3 = Patterns.FromFile(path3);
+            session.Wait(iPattern3);
+            session.Click(iPattern3);
 
             string path4 = "C:\\Training\\CapstoneProject\\Images\\Checkout.png";                         // Click on the Checkout button(Use Sikuli)
-            IPattern iPatterm4 = Patterns.FromFile(path4);
-            session.Wait(iPatterm4);
-            session.Click(iPatterm4);
+            IPattern iPattern4 = Patterns.FromFile(path4);
+            session.Wait(iPattern4);
+            session.Click(iPattern4);
 
             driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div/div/div[1]/h1")).Click();    // Checkout Page is displayed
 
