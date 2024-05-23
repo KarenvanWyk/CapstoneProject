@@ -41,29 +41,8 @@ namespace Capstone
         {
             PageHome.OpenHomePage(driver);
             PageLogin.Login(driver);
-
-            driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[6]/a")).Click();  // Select the Jewelry option under the Categories section.  Jewelry downloads page is displayed
-
-            List<string> urlList = new List<string>();                                                                // Verify that the url contains Jewelry
-            urlList.Add("https://demowebshop.tricentis.com/jewelry");
-            bool isContains = urlList.Any(x => x.Contains("Jewelry"));
-        }
-
-        [Test]
-        public void ChangeDisplayView()
-        {
-            PageHome.OpenHomePage(driver);
-            PageLogin.Login(driver);
-
-            driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[6]/a")).Click();  // Select the Jewelry option under the Categories section.  Jewelry downloads page is displayed
-
-            List<string> urlList = new List<string>();                                                                // Verify that the url contains Jewelry
-            urlList.Add("https://demowebshop.tricentis.com/jewelry");
-            bool isContains = urlList.Any(x => x.Contains("Jewelry"));
-
-            driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]")).Click();                                   // Select the List option under the View as dropdown
-
-            driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]/option[2]")).Click();                         // Products will be displayed underneath each other
+            PageJewelry.SelectOptionJewelry(driver);
+            PageJewelry.ChangeDisplayView(driver);
         }
 
         [Test]
@@ -71,18 +50,9 @@ namespace Capstone
         {
             PageHome.OpenHomePage(driver);
             PageLogin.Login(driver);
-
-            driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[6]/a")).Click();  // Select the Jewelry option under the Categories section.  Jewelry downloads page is displayed
-
-            List<string> urlList = new List<string>();                                                                // Verify that the url contains Jewelry
-            urlList.Add("https://demowebshop.tricentis.com/jewelry");
-            bool isContains = urlList.Any(x => x.Contains("Jewelry"));
-
-            driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]")).Click();                                   // Select the List option under the View as dropdown
-
-            driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]/option[2]")).Click();                         // Products will be displayed underneath each other
-
-            PageJewelry.Jewelry(driver, session, key);
+            PageJewelry.SelectOptionJewelry(driver);
+            PageJewelry.ChangeDisplayView(driver);
+            PageJewelry.SelectJewelryType(driver, session, key);
         }
 
         [Test]
@@ -90,19 +60,9 @@ namespace Capstone
         {
             PageHome.OpenHomePage(driver);
             PageLogin.Login(driver);
-
-            driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[6]/a")).Click();  // Select the Jewelry option under the Categories section.  Jewelry downloads page is displayed
-
-            List<string> urlList = new List<string>();                                                                // Verify that the url contains Jewelry
-            urlList.Add("https://demowebshop.tricentis.com/jewelry");
-            bool isContains = urlList.Any(x => x.Contains("Jewelry"));
-
-            driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]")).Click();                                   // Select the List option under the View as dropdown
-
-            driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]/option[2]")).Click();                         // Products will be displayed underneath each other
-
-            PageJewelry.Jewelry(driver, session, key);
-
+            PageJewelry.SelectOptionJewelry(driver);
+            PageJewelry.ChangeDisplayView(driver);
+            PageJewelry.SelectJewelryType(driver, session, key);
             PageCart.ShoppingCart(driver, session, key);
 
         }
@@ -112,28 +72,11 @@ namespace Capstone
         {
             PageHome.OpenHomePage(driver);
             PageLogin.Login(driver);
-
-            driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[6]/a")).Click();  // Select the Jewelry option under the Categories section.  Jewelry downloads page is displayed
-
-            List<string> urlList = new List<string>();                                                                // Verify that the url contains Jewelry
-            urlList.Add("https://demowebshop.tricentis.com/jewelry");
-            bool isContains = urlList.Any(x => x.Contains("Jewelry"));
-
-            driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]")).Click();                                   // Select the List option under the View as dropdown
-
-            driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]/option[2]")).Click();                         // Products will be displayed underneath each other
-
-            PageJewelry.Jewelry(driver, session, key);
-
+            PageJewelry.SelectOptionJewelry(driver);
+            PageJewelry.ChangeDisplayView(driver);
+            PageJewelry.SelectJewelryType(driver, session, key);
             PageCart.ShoppingCart(driver, session, key);
-            Thread.Sleep(5000);
-
-            driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[1]/div[1]/a/img")).Click();                     // Click on the Demo Work Shop Logo. Home page is displayed
-            Thread.Sleep(5000);
-
-            driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")).Click();         // Select on the Logout link in the page header.  Home page with login option is displayed
-         
-
+            PageCart.Logout(driver);
         }
 
         [OneTimeTearDown]

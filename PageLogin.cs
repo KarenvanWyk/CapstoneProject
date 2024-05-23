@@ -21,9 +21,6 @@ namespace Capstone
 
             String EmailAddressAttribute = "karenvw@pepkorit.com";                                                                             // Verify user email is displayed in page header
             Assert.That(EmailAddressAttribute.Contains("karenvw@pepkorit.com"));
-
-
         }
-
     }
 }

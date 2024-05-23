@@ -8,7 +8,32 @@ namespace Capstone
 {
     internal class PageJewelry
     {
-        public static void Jewelry(IWebDriver driver, ISikuliSession session, WindowsInput.Native.VirtualKeyCode key)
+        public static void SelectOptionJewelry(IWebDriver driver)
+        {
+            driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[6]/a")).Click();  // Select the Jewelry option under the Categories section.  Jewelry downloads page is displayed
+
+            List<string> urlList = new List<string>();                                                                // Verify that the url contains Jewelry
+            urlList.Add("https://demowebshop.tricentis.com/jewelry");
+            bool isContains = urlList.Any(x => x.Contains("Jewelry"));
+
+        }
+
+        public static void ChangeDisplayView(IWebDriver driver) 
+        {
+            driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[6]/a")).Click();  // Select the Jewelry option under the Categories section.  Jewelry downloads page is displayed
+
+            List<string> urlList = new List<string>();                                                                // Verify that the url contains Jewelry
+            urlList.Add("https://demowebshop.tricentis.com/jewelry");
+            bool isContains = urlList.Any(x => x.Contains("Jewelry"));
+
+            driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]")).Click();                                   // Select the List option under the View as dropdown
+
+            driver.FindElement(By.XPath("//*[@id=\"products-viewmode\"]/option[2]")).Click();                         // Products will be displayed underneath each other
+
+        }
+
+
+        public static void SelectJewelryType(IWebDriver driver, ISikuliSession session, WindowsInput.Native.VirtualKeyCode key)
         {
             string path = "C:\\Training\\CapstoneProject\\Images\\Create_Your_Own.png";                   // Click on the product labled Create Your Own Jewelry image (Use Sikuli).  Product Page will be displayed
             IPattern iPattern = Patterns.FromFile(path);
