@@ -50,7 +50,7 @@ namespace Capstone
         }
         public static void Logout(IWebDriver driver)
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(1000);
             driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[1]/div[1]/a/img")).Click();              // Click on the Demo Work Shop Logo. Home page is displayed
             
             Thread.Sleep(3000);
