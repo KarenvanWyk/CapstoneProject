@@ -17,6 +17,7 @@ This project presents the development of automation testing of the Demo Web Shop
   - [Proceed to Checkout](#proceed-to-checkout)
   - [Return to home page & logout](#return-to-home-page-and-logout)
 - [Reporting](#reporting)
+- [Improvements](#improvements)
 
 
 
@@ -78,6 +79,7 @@ Extent Reports. a customizable HTML report, which  integrates into Selenium WebD
 
 ![image](https://github.com/KarenvanWyk/CapstoneProject/assets/127295835/ee0dc786-a7ff-463c-a8e1-571e05085651)
 
-
+## 7. Improvements
+Boolean exception handling is currently used, however this can be approved to return more descriptive error messages in future.
 
 
