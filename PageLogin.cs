@@ -9,7 +9,7 @@ namespace Capstone
             driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")).Click();                                  // Login page is displayed.  Click on Login link in the page header
 
             string DisplayNameAttribute = "Returning Customer";                                                                                // Verify that the Entry box header is Returning Customer
-            Assert.That(DisplayNameAttribute.Contains("Returning Customers"));
+            Assert.That(DisplayNameAttribute.Contains("Returning Customer"));
 
             driver.FindElement(By.Id("Email")).SendKeys(Config.email);                                                                         // Enter email adress
             Thread.Sleep(300);
