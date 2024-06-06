@@ -54,26 +54,26 @@ This project presents the development of automation testing of the Demo Web Shop
 
 Below is a short description of each test case with execution conditions:
 
-    ### 5.1  Navigate to the Demo Web Shop Website
-    Using Selenium, open Chrome Browser and navigate to the “https://demowebshop.tricentis.com/" webpage,verify Page title
+    5.1  Navigate to the Demo Web Shop Website
+         Using Selenium, open Chrome Browser and navigate to the “https://demowebshop.tricentis.com/" webpage,verify Page title
 
-    ### 5.2  Login
-    Using Selenium, login from the page header and complete a number of verification steps
+    5.2  Login
+         Using Selenium, login from the page header and complete a number of verification steps
 
-    ### 5.3  Select category
-    Using Selenium, select Jewelry under the categories section and verify that the url is correct
+    5.3  Select category
+         Using Selenium, select Jewelry under the categories section and verify that the url is correct
 
-    ### 5.4  Change display view
-    Using Selenium, select the List option under the View as dropdown
+    5.4  Change display view
+         Using Selenium, select the List option under the View as dropdown
 
-    ### 5.5  Add product to the cart
-    Using Sikuli, select a specific Product, Material option, determine Length, Pendant option and increase the Quantity.  Add to the cart and navigate to the Shopping Cart link.
+    5.5  Add product to the cart
+         Using Sikuli, select a specific Product, Material option, determine Length, Pendant option and increase the Quantity.  Add to the cart and navigate to the Shopping Cart link.
 
-    ### 5.6  Proceed to Checkout
-    Using Sikuli, select Country from the dropdown, capture ZipCode in the source field,, select the T&C’s checkbox and select the Checkout button.  Using Selenium verify the page header
+    5.6  Proceed to Checkout
+         Using Sikuli, select Country from the dropdown, capture ZipCode in the source field,, select the T&C’s checkbox and select the Checkout button.  Using Selenium verify the page header
 
-    ### 5.7  Return to home page & logout
-    Using Selenium, select the Demo WorkShop logo and select to Logout.  
+    5.7  Return to home page & logout
+         Using Selenium, select the Demo WorkShop logo and select to Logout.  
 
 ## 6. Reporting
 Extent Reports. a customizable HTML report, which  integrates into Selenium WebDriver using the NUnit framework was used to generate test reports.
