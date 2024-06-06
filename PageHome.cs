@@ -1,4 +1,8 @@
 ﻿using OpenQA.Selenium;
+using AventStack.ExtentReports.Reporter;
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Model;
+
 
 namespace Capstone
 {
@@ -12,5 +16,6 @@ namespace Capstone
             Assert.True(PageTitle.Contains("Demo Web Shop"));                                       //Verify page title displays Demo Web Shop
 
         }
+
     }
 }

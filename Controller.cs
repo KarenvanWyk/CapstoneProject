@@ -5,6 +5,10 @@ using SikuliSharp;
 using WindowsInput.Native;
 using WindowsInput;
 using System.Reactive.Joins;
+using AventStack.ExtentReports.Reporter;
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Model;
+using System.Xml.Linq;
 
 
 namespace Capstone
@@ -14,6 +18,8 @@ namespace Capstone
         ISikuliSession session;
         IWebDriver driver;
         VirtualKeyCode key;
+        static ExtentReports reports;
+
 
         [OneTimeSetUp]
         public void OneTimeSetup()
@@ -21,68 +27,173 @@ namespace Capstone
             session = Sikuli.CreateSession();
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
+
+            reports = new ExtentReports();
+            var htmlReporter = new ExtentSparkReporter("C:\\Training\\CapstoneProject\\Reports\\CapstoneProjectSpark.html");
+            reports.AttachReporter(htmlReporter);
+            
         }
 
         [Test]
         public void HomePage()
         {
-            PageHome.OpenHomePage(driver);
+            ExtentTest test = reports.CreateTest("TEST CASE:  Open Home Page");
+            try
+            {
+                PageHome.OpenHomePage(driver);
+                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+            }
+            catch (Exception ex)
+            {
+                test.Fail(ex.Message);
+                Assert.Fail(ex.Message);
+            }
         }
 
         [Test]
         public void Login()
         {
-            PageHome.OpenHomePage(driver);
-            PageLogin.Login(driver);
-        }
+            ExtentTest test = reports.CreateTest("TEST CASE:  Login");
+            try
+            {
+                PageHome.OpenHomePage(driver);
+                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+
+                PageLogin.Login(driver);
+                test.Pass("LOG IN:  TEST CASE PASSED");
+            }
+            catch (Exception ex)
+            {
+                test.Fail(ex.Message);
+                Assert.Fail(ex.Message);
+            }
+        }    
 
         [Test]
         public void SelectCategory()
         {
-            PageHome.OpenHomePage(driver);
-            PageLogin.Login(driver);
-            PageJewelry.SelectOptionJewelry(driver);
-            PageJewelry.ChangeDisplayView(driver);
+            ExtentTest test = reports.CreateTest("TEST CASE:  Login");
+            try
+            {
+                PageHome.OpenHomePage(driver);
+                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+
+                PageLogin.Login(driver);
+                test.Pass("LOG IN:  TEST CASE PASSED");
+
+                PageJewelry.SelectOptionJewelry(driver);
+                test.Pass("SELECT OPTION JEWELRY:  TEST CASE PASSED");
+
+                PageJewelry.ChangeDisplayView(driver);
+                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE PASSED");
+            }
+            catch (Exception ex)
+            {
+                test.Fail(ex.Message);
+                Assert.Fail(ex.Message);
+            }
         }
 
         [Test]
-        public void AddProduct()
+        public void JewelryDesign()
         {
-            PageHome.OpenHomePage(driver);
-            PageLogin.Login(driver);
-            PageJewelry.SelectOptionJewelry(driver);
-            PageJewelry.ChangeDisplayView(driver);
-            PageJewelry.SelectJewelryType(driver, session, key);
+            ExtentTest test = reports.CreateTest("TEST CASE:  Login");
+            try
+            {
+                PageHome.OpenHomePage(driver);
+                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+
+                PageLogin.Login(driver);
+                test.Pass("LOG IN:  TEST CASE PASSED");
+
+                PageJewelry.SelectOptionJewelry(driver);
+                test.Pass("SELECT OPTION JEWELRY:  TEST CASE PASSED");
+
+                PageJewelry.ChangeDisplayView(driver);
+                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE PASSED");
+
+                PageJewelry.CreateYourJewelry(driver, session, key);
+                test.Pass("CREATE YOUR JEWELRY:  TEST CASE PASSED");
+            }
+            catch (Exception ex)
+            {
+                test.Fail(ex.Message);
+                Assert.Fail(ex.Message);
+            }
         }
 
         [Test]
-        public void Checkout()
+        public void ShoppingCart()
         {
-            PageHome.OpenHomePage(driver);
-            PageLogin.Login(driver);
-            PageJewelry.SelectOptionJewelry(driver);
-            PageJewelry.ChangeDisplayView(driver);
-            PageJewelry.SelectJewelryType(driver, session, key);
-            PageCart.ShoppingCart(driver, session, key);
+            ExtentTest test = reports.CreateTest("TEST CASE:  Login");
+            try
+            {
+                PageHome.OpenHomePage(driver);
+                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
 
+                PageLogin.Login(driver);
+                test.Pass("LOG IN:  TEST CASE PASSED");
+
+                PageJewelry.SelectOptionJewelry(driver);
+                test.Pass("SELECT OPTION JEWELRY:  TEST CASE PASSED");
+
+                PageJewelry.ChangeDisplayView(driver);
+                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE PASSED");
+
+                PageJewelry.CreateYourJewelry(driver, session, key);
+                test.Pass("CREATE YOUR JEWELRY:  TEST CASE PASSED");
+
+                PageCart.ShoppingCart(driver, session, key);
+                test.Pass("SHOPPING CART:  TEST CASE PASSED");
+            }
+            catch (Exception ex)
+            {
+                test.Fail(ex.Message);
+                Assert.Fail(ex.Message);
+            }
         }
 
         [Test]
         public void LogOut()
         {
-            PageHome.OpenHomePage(driver);
-            PageLogin.Login(driver);
-            PageJewelry.SelectOptionJewelry(driver);
-            PageJewelry.ChangeDisplayView(driver);
-            PageJewelry.SelectJewelryType(driver, session, key);
-            PageCart.ShoppingCart(driver, session, key);
-            PageCart.Logout(driver);
+            ExtentTest test = reports.CreateTest("TEST CASE:  Login");
+            try
+            {
+                PageHome.OpenHomePage(driver);
+                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+
+                PageLogin.Login(driver);
+                test.Pass("LOG IN:  TEST CASE PASSED");
+
+                PageJewelry.SelectOptionJewelry(driver);
+                test.Pass("SELECT OPTION JEWELRY:  TEST CASE PASSED");
+
+                PageJewelry.ChangeDisplayView(driver);
+                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE PASSED");
+
+                PageJewelry.CreateYourJewelry(driver, session, key);
+                test.Pass("CREATE YOUR JEWELRY:  TEST CASE PASSED");
+
+                PageCart.ShoppingCart(driver, session, key);
+                test.Pass("SHOPPING CART:  TEST CASE PASSED");
+
+                PageCart.Logout(driver);
+                test.Pass("LOG OUT:  TEST CASE PASSED");
+
+            }
+            catch (Exception ex)
+            {
+                test.Fail(ex.Message);
+                Assert.Fail(ex.Message);
+            }
         }
 
         [OneTimeTearDown]
         public void OneTimeTearDown()
         {
            driver.Dispose();
+           reports.Flush();
+           reports = null;
         }
 
     }

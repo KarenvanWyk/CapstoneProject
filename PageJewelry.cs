@@ -33,7 +33,7 @@ namespace Capstone
         }
 
 
-        public static void SelectJewelryType(IWebDriver driver, ISikuliSession session, WindowsInput.Native.VirtualKeyCode key)
+        public static void CreateYourJewelry(IWebDriver driver, ISikuliSession session, WindowsInput.Native.VirtualKeyCode key)
         {
             string path = "C:\\Training\\CapstoneProject\\Images\\Create_Your_Own.png";                   // Click on the product labled Create Your Own Jewelry image (Use Sikuli).  Product Page will be displayed
             IPattern iPattern = Patterns.FromFile(path);
@@ -69,11 +69,10 @@ namespace Capstone
             session.Click(iPattern5);
             sim.Keyboard.KeyPress(VirtualKeyCode.BACK);
             session.Type("2");
-            //sim.Keyboard.KeyPress(VirtualKeyCode.RETURN);
 
             string path6 = "C:\\Training\\CapstoneProject\\Images\\Add_to_Cart.png";                      // Click on the Add to cart button (Use Sikuli)
-            IPattern iPatternf = Patterns.FromFile(path6);
-            session.Click(iPatternf);
+            IPattern iPattern6 = Patterns.FromFile(path6);
+            session.Click(iPattern6);
 
         }
 
