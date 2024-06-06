@@ -76,6 +76,7 @@ Below is a short description of each test case with execution conditions:
 ## 6. Reporting
 Extent Reports. a customizable HTML report, which  integrates into Selenium WebDriver using the NUnit framework was used to generate test reports.
 
+![image](https://github.com/KarenvanWyk/CapstoneProject/assets/127295835/ee0dc786-a7ff-463c-a8e1-571e05085651)
 
 
 
