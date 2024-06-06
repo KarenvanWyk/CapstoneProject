@@ -2,8 +2,8 @@
 {
     public class Config
     {
-        public static readonly String url = "https://demowebshop.tricentis.com";
-        public static readonly String email = "karenvw@pepkorit.com";
-        public static readonly String password = "Password";
+        public static readonly string url = "https://demowebshop.tricentis.com";
+        public static readonly string email = "karenvw@pepkorit.com";
+        public static readonly string password = "Password";
     } // end sealed
 } // end namespace

@@ -45,7 +45,7 @@ namespace Capstone
 
             driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div/div/div[1]/h1")).Click();         // Checkout Page is displayed
 
-            String PageHeader = "Checkout";                                                                    // Verify that the page header is Checkout.  Page header is displayed as Checkout
+            string PageHeader = "Checkout";                                                                    // Verify that the page header is Checkout.  Page header is displayed as Checkout
             Assert.That(PageHeader.Contains("Checkout"));     
         }
         public static void Logout(IWebDriver driver)

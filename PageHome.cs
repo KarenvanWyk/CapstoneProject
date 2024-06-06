@@ -12,7 +12,7 @@ namespace Capstone
         {
 
             driver.Navigate().GoToUrl(" https://demowebshop.tricentis.com/");
-            String PageTitle = driver.Title;
+            string PageTitle = driver.Title;
             Assert.True(PageTitle.Contains("Demo Web Shop"));                                       //Verify page title displays Demo Web Shop
 
         }
