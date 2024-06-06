@@ -1,9 +1,7 @@
 # Capstone Project
 This project presents the development of automation testing of the Demo Web Shop browser using predefined test cases.  
 
-<a href="https://demowebshop.tricentis.com/">
-    <img src="img/readme/TestingWebsite.png" align="center"/>
-</a>
+![image](https://github.com/KarenvanWyk/CapstoneProject/assets/127295835/5e82f5c5-9342-4a5f-968a-e2ca1bf07c44)
 
 
 ## 1. Index
