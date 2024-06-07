@@ -45,9 +45,10 @@ namespace Capstone
 
             driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div/div/div[1]/h1")).Click();         // Checkout Page is displayed
 
-            string PageHeader = "Checkout";                                                                    // Verify that the page header is Checkout.  Page header is displayed as Checkout
-            Assert.That(PageHeader.Contains("Checkout"));     
-        }
+            string headerString = driver.Title;
+            string PageHeader = "Checkout";                                                                           // Verify that the page header is Checkout.  Page header is displayed as Checkout
+            Assert.That(headerString.Contains("Checkout"), $"Expected [{PageHeader}], but found [{headerString}]");
+    }
         public static void Logout(IWebDriver driver)
         {
             Thread.Sleep(1000);
@@ -55,11 +56,13 @@ namespace Capstone
             
             Thread.Sleep(3000);
             driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")).Click();  // Select on the Logout link in the page header.  Home page with login option is displayed
+
+            string loginString = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")).Text;
+            string OptionLogin = "Log in";
+            Assert.That(loginString.Contains("Log in"), $"Expected [{OptionLogin}], but found [{loginString}]");
         }
 
-
     }
-
 
 }
 
