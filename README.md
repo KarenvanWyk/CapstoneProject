@@ -45,7 +45,7 @@ This project presents the development of automation testing of the Demo Web Shop
 
     4.1  Configuration: Create the configuration file to store login details which will be used across all test cases
     4.2  OneTimeSetup: this function is called once at the start of each test case to create the session and driver 
-    4.3  Test Cases: execute seven (7) predefined test cases
+    4.3  Test Cases: execute seven (7) predefined test cases.  Each test case run on it's own, the user can select to run LogOut in order to run all test cases consequetively
     4.4  OneTimeTearDown : this function is called once at the end of each test case to close the session and driver
 
 
@@ -82,8 +82,9 @@ Extent Reports. a customizable HTML report, which  integrates into Selenium WebD
 ## 7. Improvements
 
     7.1  Negative test cases can be added to the project
-    7.2  Boolean exception handling is currently used with a descriptive message where verification was required (see examples below).  Improved exceptional handling can be added however to test cases to build a more robust test program to verify code
-
+    7.2  Boolean exception handling is currently used with a descriptive message where verification was required (see examples below).  Improved exception handling can be added to the project in order to build a more robust test program
+         
+         
 ![image](https://github.com/KarenvanWyk/CapstoneProject/assets/127295835/67fb125a-6dc8-49b9-87c7-a0cf034625cb)
 
 ![image](https://github.com/KarenvanWyk/CapstoneProject/assets/127295835/0d42c783-5c35-406c-a647-cccaeb53e988)
