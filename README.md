@@ -83,11 +83,15 @@ Extent Reports. a customizable HTML report, which  integrates into Selenium WebD
 
     7.1  Negative test cases can be added to the project
     7.2  Boolean exception handling is currently used with a descriptive message where verification was required (see examples below).  Improved exception handling can be added to the project in order to build a more robust test program
-         
-         
+              
 ![image](https://github.com/KarenvanWyk/CapstoneProject/assets/127295835/67fb125a-6dc8-49b9-87c7-a0cf034625cb)
 
 ![image](https://github.com/KarenvanWyk/CapstoneProject/assets/127295835/0d42c783-5c35-406c-a647-cccaeb53e988)
+
+## 8. How to Install
+Create a C:\Training\CapstoneProject directory with folders Images and Reports in order for the project to pick up the screenshots and HTML reports
+    8.1  C:\\Training\\CapstoneProject\\Images
+    8.2  C:\\Training\\CapstoneProject\\Reports
 
 
 
