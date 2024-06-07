@@ -41,7 +41,7 @@ namespace Capstone
             try
             {
                 PageHome.OpenHomePage(driver);
-                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+                test.Pass("OPEN HOME PAGE: TEST CASE 1 PASSED");
             }
             catch (Exception ex)
             {
@@ -57,10 +57,10 @@ namespace Capstone
             try
             {
                 PageHome.OpenHomePage(driver);
-                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+                test.Pass("OPEN HOME PAGE: TEST CASE 1 PASSED");
 
                 PageLogin.Login(driver);
-                test.Pass("LOG IN:  TEST CASE PASSED");
+                test.Pass("LOG IN:  TEST CASE 2 PASSED");
             }
             catch (Exception ex)
             {
@@ -76,16 +76,16 @@ namespace Capstone
             try
             {
                 PageHome.OpenHomePage(driver);
-                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+                test.Pass("OPEN HOME PAGE: TEST CASE 1 PASSED");
 
                 PageLogin.Login(driver);
-                test.Pass("LOG IN:  TEST CASE PASSED");
+                test.Pass("LOG IN:  TEST CASE 2 PASSED");
 
                 PageJewelry.SelectOptionJewelry(driver);
-                test.Pass("SELECT OPTION JEWELRY:  TEST CASE PASSED");
+                test.Pass("SELECT OPTION JEWELRY:  TEST CASE 3 PASSED");
 
                 PageJewelry.ChangeDisplayView(driver);
-                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE PASSED");
+                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE 4 PASSED");
             }
             catch (Exception ex)
             {
@@ -101,19 +101,19 @@ namespace Capstone
             try
             {
                 PageHome.OpenHomePage(driver);
-                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+                test.Pass("OPEN HOME PAGE: TEST CASE 1 PASSED");
 
                 PageLogin.Login(driver);
-                test.Pass("LOG IN:  TEST CASE PASSED");
+                test.Pass("LOG IN:  TEST CASE 2 PASSED");
 
                 PageJewelry.SelectOptionJewelry(driver);
-                test.Pass("SELECT OPTION JEWELRY:  TEST CASE PASSED");
+                test.Pass("SELECT OPTION JEWELRY:  TEST CASE 3 PASSED");
 
                 PageJewelry.ChangeDisplayView(driver);
-                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE PASSED");
+                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE 4 PASSED");
 
                 PageJewelry.CreateYourJewelry(driver, session, key);
-                test.Pass("CREATE YOUR JEWELRY:  TEST CASE PASSED");
+                test.Pass("CREATE YOUR JEWELRY:  TEST CASE 5 PASSED");
             }
             catch (Exception ex)
             {
@@ -129,22 +129,22 @@ namespace Capstone
             try
             {
                 PageHome.OpenHomePage(driver);
-                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+                test.Pass("OPEN HOME PAGE: TEST CASE 1 PASSED");
 
                 PageLogin.Login(driver);
-                test.Pass("LOG IN:  TEST CASE PASSED");
+                test.Pass("LOG IN:  TEST CASE 2 PASSED");
 
                 PageJewelry.SelectOptionJewelry(driver);
-                test.Pass("SELECT OPTION JEWELRY:  TEST CASE PASSED");
+                test.Pass("SELECT OPTION JEWELRY:  TEST CASE 3 PASSED");
 
                 PageJewelry.ChangeDisplayView(driver);
-                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE PASSED");
+                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE 4 PASSED");
 
                 PageJewelry.CreateYourJewelry(driver, session, key);
-                test.Pass("CREATE YOUR JEWELRY:  TEST CASE PASSED");
+                test.Pass("CREATE YOUR JEWELRY:  TEST CASE 5 PASSED");
 
                 PageCart.ShoppingCart(driver, session, key);
-                test.Pass("SHOPPING CART:  TEST CASE PASSED");
+                test.Pass("SHOPPING CART:  TEST CASE 6 PASSED");
             }
             catch (Exception ex)
             {
@@ -160,25 +160,25 @@ namespace Capstone
             try
             {
                 PageHome.OpenHomePage(driver);
-                test.Pass("OPEN HOME PAGE: TEST CASE PASSED");
+                test.Pass("OPEN HOME PAGE: TEST CASE 1 PASSED");
 
                 PageLogin.Login(driver);
-                test.Pass("LOG IN:  TEST CASE PASSED");
+                test.Pass("LOG IN:  TEST CASE 2 PASSED");
 
                 PageJewelry.SelectOptionJewelry(driver);
-                test.Pass("SELECT OPTION JEWELRY:  TEST CASE PASSED");
+                test.Pass("SELECT OPTION JEWELRY:  TEST CASE 3 PASSED");
 
                 PageJewelry.ChangeDisplayView(driver);
-                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE PASSED");
+                test.Pass("CHANGE DISPLAY VIEW:  TEST CASE 4 PASSED");
 
                 PageJewelry.CreateYourJewelry(driver, session, key);
-                test.Pass("CREATE YOUR JEWELRY:  TEST CASE PASSED");
+                test.Pass("CREATE YOUR JEWELRY:  TEST CASE 5 PASSED");
 
                 PageCart.ShoppingCart(driver, session, key);
-                test.Pass("SHOPPING CART:  TEST CASE PASSED");
+                test.Pass("SHOPPING CART:  TEST CASE 6 PASSED");
 
                 PageCart.Logout(driver);
-                test.Pass("LOG OUT:  TEST CASE PASSED");
+                test.Pass("LOG OUT:  TEST CASE 7 PASSED");
 
             }
             catch (Exception ex)
