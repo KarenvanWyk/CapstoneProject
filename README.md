@@ -89,9 +89,11 @@ Extent Reports. a customizable HTML report, which  integrates into Selenium WebD
 ![image](https://github.com/KarenvanWyk/CapstoneProject/assets/127295835/0d42c783-5c35-406c-a647-cccaeb53e988)
 
 ## 8. How to Install
-Create a C:\Training\CapstoneProject directory with folders Images and Reports in order for the project to pick up the screenshots and HTML reports
-    8.1  C:\\Training\\CapstoneProject\\Images
-    8.2  C:\\Training\\CapstoneProject\\Reports
+Create a C:\Training\CapstoneProject directory with folders Images and Reports in order for the project to pick up the screenshots and HTML reports:
+
+C:\\Training\\CapstoneProject\\Images
+
+C:\\Training\\CapstoneProject\\Reports
 
 
 
