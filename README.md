@@ -80,6 +80,7 @@ Extent Reports. a customizable HTML report, which  integrates into Selenium WebD
 ![image](https://github.com/KarenvanWyk/CapstoneProject/assets/127295835/ee0dc786-a7ff-463c-a8e1-571e05085651)
 
 ## 7. Improvements
-Boolean exception handling is currently used, however this can be approved to return more descriptive error messages in future.
+Boolean exception handling is currently used, with a descriptive error messages, however more exceptions can be build in for future use to catch additional errors.
+Negative test cases can be added to the project
 
 
