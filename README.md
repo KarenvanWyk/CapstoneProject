@@ -18,6 +18,7 @@ This project presents the development of automation testing of the Demo Web Shop
   - [Return to home page & logout](#return-to-home-page-and-logout)
 - [Reporting](#reporting)
 - [Improvements](#improvements)
+- [How to Install](#how-to-install)
 
 
 
